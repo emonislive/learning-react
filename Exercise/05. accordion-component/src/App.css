@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  background-color: #f8f9fa;
+  line-height: 1.4;
+}
+
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 20px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 24px;
+
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ced4da;
+  transition: color 0.3s ease;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #087f5b;
+  transition: transform 0.3s ease;
+}
+
+.context-box {
+  grid-column: 2 / -1;
+  margin-top: 16px;
+  line-height: 1.6;
+  color: #495057;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 1s ease;
+}
+
+/* Active (expanded) state */
+.item.open {
+  border-left: 6px solid #087f5b;
+  background-color: #e6fcf5;
+}
+
+.item.open .number {
+  color: #087f5b;
+}
+
+.item.open .context-box {
+  max-height: 200px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.item.open .icon {
+  transform: rotate(180deg);
+}
