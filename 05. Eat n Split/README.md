@@ -1,7 +1,7 @@
 # Instruction
 
 ## Preview
-- Live Server - eat-n-split-diary.netlify.app
+- Live Server: https://eat-n-split-diary.netlify.app/
 
 <div align="center"> 
     <img src="preview-1.png" height="150px"> 
